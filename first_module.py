@@ -6,11 +6,17 @@ def stevens_hoboken():
     print("First modules name: {}".format(__name__))
 
 
+def kurtlab():
+    print("Hi from Kurtlab")
+
+
 # Is this file being run directly by Python or is it being imported?
 if __name__ == '__main__':
     stevens_hoboken()
+    kurtlab()
 
-# if __name__ == '__main__':
-#     print("Run directly")
-# else:
-#     print("Run from import")
+if __name__ == '__main__':
+    print("Run directly")
+else:
+    print("Run from import")
+    print("{}".format(__name__))

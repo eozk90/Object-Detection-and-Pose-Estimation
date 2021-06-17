@@ -1,52 +1,47 @@
 # Python Object-Oriented Programming
 # data and functions associated with a class, we call those attributes and methods
-
-class Employee:
-    # init method takes the instance which we called self,
-    # then takes first, last, and pay as arguments or attributes of our class
-    def __init__(self, first, last, pay):
-        self.first = first
-        self.last = last
-        self.pay = pay
-        self.email = first + '.' + last + "@company.com"
-
-    # each method within a class automatically takes the instance as the first argument
-    def fullname(self):
-        return '{} {}'.format(self.first, self.last)
-
-
-# pass
-
-# unique instances of the employee class
-# instance is passed automatically, we only need to provide names and pay
-emp_1 = Employee('Corey', 'Schafer', 50000)
-emp_2 = Employee('Test', 'user', 60000)
-
-# # each of these instances now have attributes that are unique to them
-# emp_1.first = 'Corey'
-# emp_1.last = 'Schafer'
-# emp_1.email = 'coray.schafer@company.com'
-# emp_1.pay = 50000
-#
-# emp_1.first = 'Test'
-# emp_1.last = 'User'
-# emp_1.email = 'test.user@company.com'
-# emp_1.pay = 60000
-
-# print('{} {}'.format(emp_1.first, emp_1.last))
-
-print(emp_1.email)
-print(emp_2.email)
-
-# we need parenthesis because this is a method
-# instance argument (emp_1) is passed automatically
-print(emp_1.fullname())
-
-# We can also run these methods using the class name itself
-print(Employee.fullname(emp_2))
-
 # creating simple class
 # difference between a class and an instance of that class
 # how to initialize class attributes and create methods
 
+class Object_Detector:
+    # pass
+    # init method takes the instance which we called self,
+    # then takes first, last, and pay as arguments or attributes of our class
+    def __init__(self, object_number, name_object, object_width, object_height):
+        self.object_number = object_number
+        self.name_object = name_object
+        self.object_width = object_width
+        self.object_height = object_height
 
+    def storage_directory(self):
+        return "Object Detection File"
+
+
+# unique instances of the employee class
+# instance is passed automatically, we only need to provide names and pay
+image_1 = Object_Detector(1, 'Helmet', 0.3, 0.2)
+image_2 = Object_Detector(3, 'Arm Pad', 0.4, 0.5)
+
+print(image_1.name_object)
+print(image_2.object_height)
+print('{} {}'.format(image_1.name_object, image_2.object_height))
+
+# we need parenthesis because this is a method
+print(image_1.storage_directory())
+# We can also run these methods using the class name itself
+print(Object_Detector.storage_directory(image_1))
+
+# image_1 = Object_Detector()
+# image_2 = Object_Detector()
+#
+# # each of these instances now have attributes that are unique to them
+# image_1.object_number = 1
+# image_1.name_object = 'Helmet'
+# image_1.object_width= 0.3
+# image_1.object_height = 0.2
+#
+# image_2.object_number = 3
+# image_2.name_object = 'Arm Pad'
+# image_2.object_width= 0.4
+# image_2.object_height = 0.5
